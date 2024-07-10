@@ -62,7 +62,7 @@ public class InvoiceController {
 
    //    newInvoice.setDetails(details);
    //    newInvoice2.setDetails(details2);
-   //    // Invoice.detailsDB.add(newInvoice);
-   //    // Invoice.detailsDB.add(newInvoice2);
+   //    Invoice.detailsDB.add(newInvoice);
+   //    Invoice.detailsDB.add(newInvoice2);
    // }
 }
