@@ -7,13 +7,33 @@
     
 	
 	
-	<bean id="bean" 
-	      class="com.example.clase01.">    
-        <property name="greeting">
-        	<value>Hello</value>
+	<bean id="miPrimerBean" 
+	      class="com.example.clase01.BeanUno.PrimerBean">    
+        <property name="saludo">
+        	<value>Hola</value>
         </property>			      
     </bean>
+
+	 <bean id="miSegundoBean" 
+	      class="com.example.clase01.BeanDos.SegundoBean">    
+			<constructor-arg index="0" type="java.lang.String" value="Hola"></constructor-arg>
+			<constructor-arg index="1" type="java.lang.String" value="Hello"></constructor-arg>
+    </bean>
     
+	 <!-- Puedo obviar los indices si paso por orden -->
+	 <bean id="miTercerBean" 
+	      class="com.example.clase01.BeanTres.Persona">    
+			<constructor-arg value="100"></constructor-arg> 
+			<constructor-arg value="Luciano Crocco"></constructor-arg>
+			<constructor-arg ref="domicilio"></constructor-arg>
+    </bean>
+
+	 <!-- Necesitamos un constructor vacio para el ref de domicilio -->
+	 <bean id="domicilio" 
+	      class="com.example.clase01.BeanTres.Domicilio">    
+			<property name="direccion" value="Parque Chacabuco"></property>	
+    </bean>
+
     
     
 </beans>
