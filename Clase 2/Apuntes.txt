@@ -1,5 +1,5 @@
 Temario:
 Spring Boot - Hibernate - Spring Data
 
-
 mvn org.springframework.boot:spring-boot-maven-plugin:run
+mvn spring-boot:run
