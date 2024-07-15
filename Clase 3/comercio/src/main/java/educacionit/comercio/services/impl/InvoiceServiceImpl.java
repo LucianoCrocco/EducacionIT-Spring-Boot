@@ -14,5 +14,17 @@ public class InvoiceServiceImpl implements InvoiceService {
    public List<Invoice> invoices() {
       return null;
    }
+
+   @Override
+   public void deleteById(Long Id) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'deleteById'");
+   }
+
+   @Override
+   public Invoice findById(Long Id) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'findById'");
+   }
    
 }

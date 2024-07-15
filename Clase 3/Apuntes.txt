@@ -3,5 +3,3 @@ Temario: Spring MVC
 http://localhost:8080/h2-console -> Consola h2
 
 Los repositorios son la manera que tiene nuestro programa para conectarse a una base de datos.
-
-1:04:10

@@ -20,5 +20,14 @@ public class InvoiceServiceImpl2 implements InvoiceService {
    public List<Invoice> invoices() {
       return repository.findAll();
    }
-   
+
+   @Override
+   public void deleteById(Long Id){
+      repository.deleteById(Id);
+   }
+
+   @Override
+   public Invoice findById(Long Id){
+      return repository.findById(Id).orElse(null);
+   }
 }
