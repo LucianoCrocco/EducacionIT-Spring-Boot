@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 public class InvoiceDetail{
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   Long id;
+   private Long id;
 
    @ManyToOne(fetch = FetchType.LAZY)
    @JoinColumn(name = "invoice_id")

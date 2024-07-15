@@ -3,10 +3,8 @@ package educacionit.comercio.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import educacionit.comercio.entities.Invoice;
-import educacionit.comercio.entities.Product;
 import educacionit.comercio.services.InvoiceService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +20,15 @@ public class InvoiceController {
    @Qualifier("implementacionMejorada")
    private InvoiceService invoiceService;
    
+   //* Metodo antes de tener el JPA de Hibernate */
+   // @GetMapping("/getAll")
+   // public String getAll(){
+   //    return invoiceService.invoices().toString();
+   // }
+
    @GetMapping("/getAll")
-   public String getAll(){
-      return invoiceService.invoices().toString();
+   public List<Invoice> getAll(){
+      return invoiceService.invoices();
    }
 
    @GetMapping("/getOne")

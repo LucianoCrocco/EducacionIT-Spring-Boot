@@ -1,6 +1,5 @@
 package educacionit.comercio.entities;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -19,11 +18,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "INVOICE")
+@Table(name = "invoice")
 public class Invoice {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   Long id;
+   private Long id;
 
    @OneToMany(mappedBy="invoice", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
    private List<InvoiceDetail> details;
