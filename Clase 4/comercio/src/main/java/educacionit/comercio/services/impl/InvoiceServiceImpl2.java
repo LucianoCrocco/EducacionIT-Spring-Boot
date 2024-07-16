@@ -12,7 +12,6 @@ import educacionit.comercio.services.InvoiceService;
 @Service("implementacionMejorada")
 public class InvoiceServiceImpl2 implements InvoiceService {
 
-   //* Le indico que es una bean */
    @Autowired
    public InvoiceRepository repository;
 

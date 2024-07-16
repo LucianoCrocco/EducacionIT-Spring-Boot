@@ -22,25 +22,12 @@ public class InvoiceController {
    @Autowired
    @Qualifier("implementacionMejorada")
    private InvoiceService invoiceService;
-   
-   //* Metodo antes de tener el JPA de Hibernate */
-   // @GetMapping("/getAll")
-   // public String getAll(){
-   //    return invoiceService.invoices().toString();
-   // }
-
-   //* Metodo si queremos un REST en vez de una vista - Tiene que ser RestController el tipo de Bean*/
-   // @GetMapping("/getAll")
-   // public List<Invoice> getAll(){
-   //    return invoiceService.invoices();
-   // }
 
    @GetMapping("/getAll")
    public String getAllInvoiceModel(Model model){
       model.addAttribute("message", "Página de Inicio");
       //* El retorno tiene que ser el nombre del HTML que este en la carpeta resources/templates */
       return "index";
-      // return invoiceService.invoices();
    }
 
    @GetMapping("/all") //indica el verbo http con el que realiza la request y tambien le pasamos aprte de la ruta
