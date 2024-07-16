@@ -43,6 +43,13 @@ public class InvoiceController {
       // return invoiceService.invoices();
    }
 
+   @GetMapping("/all") //indica el verbo http con el que realiza la request y tambien le pasamos aprte de la ruta
+   public String getAllInvoice(Model model){ //Se puede usar un Map<String, Object> en lugar de model tambien
+       List<Invoice> invoices = invoiceService.invoices();
+       model.addAttribute("invoices", invoices);
+       return "invoiceList"; // el retorno debe ser el nombre de un archivo html que se encuentre dentro de la carpeta resources/templates
+   }
+
    @GetMapping("/getOne")
    public String findById(Model model, Long id){
       invoiceService.findById(id);

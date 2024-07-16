@@ -26,4 +26,12 @@ public class Invoice {
 
    @OneToMany(mappedBy="invoice", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
    private List<InvoiceDetail> details;
+
+   public Double total(){
+      Double tot = 0.0;
+      for (InvoiceDetail item : details){
+          tot += item.detailTotal();
+      };
+      return tot;
+  }
 }

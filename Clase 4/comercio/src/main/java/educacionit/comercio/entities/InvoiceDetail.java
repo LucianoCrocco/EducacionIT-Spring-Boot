@@ -32,10 +32,10 @@ public class InvoiceDetail{
    private Product product;
    
    //* Toma como valor por defecto el nombre y lo hace mayusculas
-   @Column
+   // @Column
    private Integer quantity;
 
-   public Double getDetailTotal(){
+   public Double detailTotal(){
       return product.getPrice() * quantity;
    }
 }
